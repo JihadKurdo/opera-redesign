@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: krd;
+  src: url(https://raw.githubusercontent.com/JihadKurdo/operaRedesign/main/krd.woff);
+}
+
+:root{
+  --primary: #D38301;
+  --secondary: #181818;
+  --body-color: #1E1E1E;
+}
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: background .3s ease-in-out,
+  background-color .3s ease-in-out,
+  border .3s ease-in-out,
+  color .3s ease-in-out;
+}
+
+*:hover,
+*:focus,
+*:focus-visible{
+  outline: transparent;
+}
+
+::selection {
+  color: white;
+  background-color: var(--primary);
+}
+
+img::selection {
+  color: transparent;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width:.5vw;
+  height:.5vw;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  transition: .3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: var(--text-color)
+}
+
+html,
+body{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--body-color);
+  isolation: isolate;
+}
+
+main{
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .top{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .top .backgroundImage{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 560px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+main .top .changeLanguage{
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  z-index: 2;
+  background-color: var(--secondary);
+  border: none;
+  color: white;
+  padding: .5rem;
+  border-radius: 10rem;
+  font-family: krd;
+  cursor: pointer;
+}
+
+main .top .changeLanguage:hover,
+main .top .changeLanguage:focus-visible,
+main .top .links .link:hover,
+main .top .links .link:focus-visible{
+  background-color: white;
+  color: var(--secondary);
+}
+
+main .top .changeLanguage span{
+  margin-left: .25rem;
+  line-height: 1;
+}
+
+main .top .info{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2.5rem 0;
+}
+
+main .top .info .profileImage{
+  width: 6rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: .2rem solid var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .top .info .name{
+  font-size: 2rem;
+  font-family: krd;
+  color: var(--primary);
+  margin-top: 1.5rem;
+  line-height: 1;
+}
+
+main .top .links{
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .top .links .link{
+  aspect-ratio: 1/1;
+  width: 2.25rem;
+  background-color: var(--secondary);
+  border: none;
+  color: white;
+  padding: .5rem;
+  margin-right: .5rem;
+  border-radius: 50%;
+  font-family: krd;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+main .top .links .link:last-child{
+  margin-right: 0;
+}
+
+main .bottom{
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--secondary);
+  border-radius: 1.5rem 1.5rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .bottom .selectCategory{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--body-color);
+  padding: .5rem;
+  border-radius: 10rem;
+  box-shadow: 0 .5rem .5rem #0003;
+}
+
+main .bottom .selectCategory .category{
+  border: none;
+  background-color: transparent;
+  padding: .5rem;
+  border-radius: 10rem;
+  font-family: krd;
+  font-size: 0.9rem;
+  color: white;
+  flex-grow: 1;
+  margin-right: .5rem;
+  cursor: pointer;
+}
+
+main .bottom .selectCategory .category:last-child{
+  margin-right: 0;
+}
+
+main .bottom .selectCategory .category:hover{
+  background-color: var(--primary);
+}
+
+main .bottom .selectCategory .category.active{
+  background-color: var(--primary);
+}
+
+main .bottom .selectCategory .category.active:hover{
+  background-color: white;
+  color: black;
+}
+
+main .bottom .search{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+main .bottom .search .searchBtn{
+  position: absolute;
+  left: .5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  background-color: var(--secondary);
+  padding: .5rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+main .bottom .search .searchBtn:hover,
+main .bottom .search .searchBtn:focus-visible{
+  background-color: var(--primary);
+  color: white;
+}
+
+main .bottom .search input{
+  width: 100%;
+  background-color: var(--body-color);
+  padding: .75rem;
+  border: none;
+  border-radius: 10rem;
+  color: white;
+  font-family: krd;
+  text-align: right;
+  font-size: 1rem;
+  box-shadow: 0 .5rem .5rem #0003;
+}
+
+main .bottom .search input:hover,
+main .bottom .search input:focus-visible{
+  background-color: #2B2B2B;
+}
