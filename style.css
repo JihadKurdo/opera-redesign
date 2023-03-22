@@ -21,7 +21,8 @@
   transition: background .3s ease-in-out,
   background-color .3s ease-in-out,
   border .3s ease-in-out,
-  color .3s ease-in-out;
+  color .3s ease-in-out,
+  filter .3s ease-in-out;
 }
 
 *:hover,
@@ -286,4 +287,107 @@ main .bottom .search input{
 main .bottom .search input:hover,
 main .bottom .search input:focus-visible{
   background-color: #2B2B2B;
+}
+
+main .sections{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .sections .section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 10rem;
+  background-color: var(--body-color);
+  border-radius: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+main .sections .section img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 
+  transform .3s ease-in-out,
+  filter .3s ease-in-out;
+}
+
+main .sections .section:hover img,
+main .sections .section:focus-visible img{
+  transform: scale(1.15);
+  filter: brightness(1.25);
+}
+
+main .sections .section span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+  font-family: krd;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 
+  0 0 3rem black,
+  0 0 3rem black,
+  0 0 3rem black,
+  0 0 3rem black;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--secondary);
+  width: 100%;
+  max-width: 560px;
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+  color: white;
+}
+
+footer .socialLinks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+footer .socialLinks a{
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin: .25rem;
+  border-bottom: .1rem solid transparent;
+}
+
+footer .socialLinks a:hover,
+footer .socialLinks a:focus-visible,
+footer .kurdo:hover,
+footer .kurdo:focus-visible{
+  border-bottom: .1rem solid var(--primary);
+}
+
+footer .made{
+  font-family: comfortaa;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer .kurdo{
+  font-family: comfortaa;
+  font-size: 1.25rem;
+  color: var(--primary);
+  border-bottom: .1rem solid transparent;
 }
